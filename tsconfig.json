@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    /* 🚀 Target & Module System */
+    "target": "ES2021",                 // Uses modern JavaScript features for better performance
+    "module": "CommonJS",                // Compatible with Node.js
+    "lib": ["ES2021", "DOM"],            // Supports latest JS and DOM APIs
+
+    /* 📂 Output & Build Directories */
+    "outDir": "./dist",                  // Compiles files to the `dist/` directory
+    "rootDir": "./src",                  // Defines the source directory
+    "removeComments": true,               // Removes comments in compiled output
+    "noEmit": false,                      // Allows emitting compiled files
+    "sourceMap": true,                    // Enables debugging with source maps
+
+    /* 🔎 Type Checking & Code Quality */
+    "strict": true,                       // Enforces all strict type-checking options
+    "noImplicitAny": true,                // Prevents usage of `any` type
+    "strictNullChecks": true,             // Ensures null safety
+    "strictPropertyInitialization": true, // Ensures all properties are initialized in constructors
+    "noUnusedLocals": true,               // Flags unused variables
+    "noUnusedParameters": true,           // Flags unused function parameters
+    "noImplicitReturns": true,            // Ensures all functions return values
+    "noFallthroughCasesInSwitch": true,   // Prevents unintended switch case fallthrough
+
+    /* 🏗️ Module Resolution & Import Aliases */
+    "moduleResolution": "node",           // Resolves modules using Node.js module system
+    "baseUrl": "./src",                   // Allows absolute imports from `src/`
+    "paths": {
+      "@middlewares/*": ["api/middlewares/*"],
+      "@controllers/*": ["api/controllers/*"],
+      "@routes/*": ["api/routes/*"],
+      "@services/*": ["core/services/*"],
+      "@repositories/*": ["core/repositories/*"],
+      "@models/*": ["infrastructure/database/models/*"],
+      "@webhooks/*": ["webhooks/*"],
+      "@config/*": ["config/*"]
+    },
+
+    /* ⚡ Performance Optimization */
+    "esModuleInterop": true,              // Ensures compatibility with ES modules
+    "allowSyntheticDefaultImports": true, // Enables importing default exports from CommonJS modules
+    "skipLibCheck": true,                 // Skips checking declaration files for faster builds
+    "resolveJsonModule": true,            // Allows importing JSON files
+    "forceConsistentCasingInFileNames": true // Prevents case sensitivity issues
+
+  },
+  "include": ["src"],                      // Only compiles files in `src/`
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests/**/__mocks__",
+    "*.spec.ts"
+  ] // Excludes unnecessary files
+}
