@@ -1,7 +1,10 @@
 📌 Webflow Subscription API Documentation
+
 📖 API Version: v1
 📌 Status: Proof-of-Concept (PoC)
+
 📌 Base URL: https://api.webflow-subscriptions.com/v1
+
 1️⃣ Project Overview
 
 This is a Proof-of-Concept Subscription API for Webflow, designed using Node.js, TypeScript, Express.js, MongoDB, and Stripe API.
